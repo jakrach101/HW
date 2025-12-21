@@ -145,6 +145,270 @@
             background-color: #e5e7eb;
         }
 
+        /* Case Mode Toggle */
+        .case-mode-btn {
+            min-width: 8.5rem;
+            padding: 0.55rem 0.9rem;
+            border: 1px solid #d1d5db;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            line-height: 1.1;
+            border-radius: 0.75rem;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .case-mode-btn:active {
+            transform: translateY(1px);
+        }
+
+        .case-mode-inactive {
+            background-color: #ffffff !important;
+            color: #374151 !important;
+            border-color: #d1d5db !important;
+        }
+
+        .case-mode-inactive:hover {
+            background-color: #f3f4f6 !important;
+        }
+
+        .case-mode-active-existing {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+            border-color: #2563eb !important;
+            box-shadow: 0 10px 16px -12px rgba(37, 99, 235, 0.6);
+        }
+
+        .case-mode-active-new {
+            background-color: #16a34a !important;
+            color: #ffffff !important;
+            border-color: #16a34a !important;
+            box-shadow: 0 10px 16px -12px rgba(22, 163, 74, 0.6);
+        }
+
+        .case-mode-hint {
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .mode-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            box-shadow: 0 14px 36px -28px rgba(15, 23, 42, 0.35);
+        }
+
+        .mode-status-panel {
+            display: flex;
+            gap: 1.15rem;
+            align-items: center;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .mode-status-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .mode-status-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mode-status-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .mode-badge {
+            --badge-bg: #dcfce7;
+            --badge-border: #bbf7d0;
+            --badge-text: #166534;
+            --badge-dot: #166534;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 9999px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            border: 1px solid var(--badge-border);
+            background: var(--badge-bg);
+            color: var(--badge-text);
+        }
+
+
+        .mode-badge-existing {
+            --badge-bg: #dcfce7;
+            --badge-border: #bbf7d0;
+            --badge-text: #166534;
+            --badge-dot: #166534;
+        }
+
+        .mode-badge-new {
+            --badge-bg: #fef3c7;
+            --badge-border: #fcd34d;
+            --badge-text: #b45309;
+            --badge-dot: #b45309;
+        }
+
+        .mode-card-main {
+            display: grid;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .mode-card-actions {
+            display: grid;
+            gap: 0.75rem;
+            align-content: start;
+            grid-template-columns: 1fr;
+        }
+
+        .mode-card-tips {
+            border-top: 1px dashed #dbeafe;
+            margin-top: 0.25rem;
+            padding-top: 0.75rem;
+        }
+
+        .tips-toggle-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            color: #1d4ed8;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .tips-toggle-btn:hover {
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+        }
+
+        .tips-toggle-btn:active {
+            transform: translateY(1px);
+        }
+
+        .action-btn {
+            width: 100%;
+            min-width: 10rem;
+            min-height: 3.6rem;
+            padding: 0.85rem 1rem;
+            border-radius: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            box-shadow: 0 12px 24px -18px rgba(15, 23, 42, 0.4);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-line {
+            display: block;
+            white-space: nowrap;
+        }
+
+        .action-btn::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .action-btn > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .action-btn:hover {
+            box-shadow: 0 12px 24px -18px rgba(15, 23, 42, 0.45);
+        }
+
+        .action-btn:active {
+            transform: translateY(1px);
+        }
+
+        .action-btn-line {
+            background-color: #06c755;
+            color: #0f172a;
+            border: 1px solid #05a546;
+        }
+
+        .action-btn-line:hover {
+            background-color: #05a546;
+        }
+
+        .action-btn-new {
+            background-color: #fcd34d;
+            color: #78350f;
+            border: 1px solid #f59e0b;
+        }
+
+        .action-btn-new:hover {
+            background-color: #fbbf24;
+        }
+
+        .action-btn-icon {
+            width: 2.1rem;
+            height: 2.1rem;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.32);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+        }
+
+        @media (max-width: 640px) {
+            .case-mode-btn {
+                min-width: 6.5rem;
+                font-size: 0.95rem;
+                padding: 0.5rem 0.7rem;
+            }
+
+            .action-btn {
+                min-width: 9.5rem;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .mode-card-main {
+                grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+            }
+
+            .mode-card-actions {
+                grid-template-columns: repeat(2, minmax(10rem, 1fr));
+            }
+
+            .mode-status-panel {
+                justify-self: center;
+            }
+        }
+
+
         /* Animations */
         @keyframes pulse-once {
 
@@ -231,6 +495,17 @@
             animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
         }
 
+        :root {
+            --placeholder-font-size: 1rem;
+            --placeholder-line-height: 1.35;
+        }
+
+        input,
+        textarea,
+        select {
+            line-height: 1.35;
+        }
+
         /* ELDERLY FRIENDLY: High Contrast Placeholders */
         ::placeholder {
             color: #6b7280;
@@ -238,6 +513,8 @@
             opacity: 1;
             /* Firefox */
             font-style: normal;
+            font-size: var(--placeholder-font-size);
+            line-height: var(--placeholder-line-height);
         }
 
         :-ms-input-placeholder {
@@ -248,6 +525,13 @@
         ::-ms-input-placeholder {
             color: #6b7280;
             font-style: normal;
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --placeholder-font-size: 0.9rem;
+                --placeholder-line-height: 1.2;
+            }
         }
 
 
@@ -295,20 +579,6 @@
             <h1 class="text-xl font-bold"><i class="fas fa-notes-medical mr-2"></i>รายงานคนไข้ Home Ward</h1>
 
             <div class="flex flex-wrap gap-2 items-center">
-                <!-- Start Actions (Low-tech friendly) -->
-                <button onclick="openResetConfirmation()"
-                    class="bg-white text-green-800 hover:bg-green-50 px-4 py-2.5 rounded-lg text-base font-bold shadow transition flex items-center gap-2">
-                    <i class="fas fa-user-plus"></i> รับเคสใหม่
-                </button>
-                <button onclick="startExistingCase()"
-                    class="bg-white text-blue-800 hover:bg-blue-50 px-4 py-2.5 rounded-lg text-base font-bold shadow transition flex items-center gap-2 border border-blue-100">
-                    <i class="fas fa-clipboard-list"></i> รายงานเคสเดิม
-                </button>
-                <button onclick="openImportModal()"
-                    class="bg-yellow-400 text-yellow-950 hover:bg-yellow-300 px-4 py-2.5 rounded-lg text-base font-bold shadow transition flex items-center gap-2">
-                    <i class="fas fa-file-import"></i> นำเข้าจาก LINE
-                </button>
-
                 <!-- Font Size Controls (Easy Access) -->
                 <div class="bg-white/95 text-gray-900 rounded-lg p-0.5 flex items-center gap-1 shadow">
                     <button type="button" onclick="stepFontSize(-1)"
@@ -327,25 +597,55 @@
         </div>
 
         <div class="p-6 space-y-6">
-            <!-- Quick Guide (Low-tech friendly) -->
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                <div class="flex items-start gap-3">
-                    <div
-                        class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-none">
-                        <i class="fas fa-lightbulb text-blue-700 text-lg"></i>
+            <!-- Case Mode Toggle + Tips (Clear, Low Learning Curve) -->
+            <div class="mode-card p-4">
+                <div class="flex flex-col gap-3">
+                    <div class="mode-card-main">
+                        <div class="mode-status-panel">
+                            <button type="button" id="tipsToggleBtn" onclick="toggleTipsDetail()"
+                                class="tips-toggle-btn bg-white border border-gray-200 text-blue-700 flex-shrink-0"
+                                aria-label="แสดงวิธีใช้" aria-pressed="false" aria-expanded="false"
+                                aria-controls="tipsContainer">
+                                <i class="fas fa-lightbulb"></i>
+                            </button>
+                            <div class="mode-status-content">
+                                <p class="mode-status-label">โหมดปัจจุบัน</p>
+                                <div class="mode-status-row">
+                                    <span id="caseModeBadge" class="mode-badge mode-badge-existing">เคสเดิม</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mode-card-actions">
+                            <button onclick="openImportExistingCase()"
+                                class="action-btn action-btn-line text-base flex items-center justify-center gap-3">
+                                <i class="fas fa-file-import action-btn-icon"></i>
+                                <span class="leading-tight text-center">
+                                    <span class="action-line">เคสเดิม</span>
+                                    <span class="action-line">นำเข้าจาก LINE</span>
+                                </span>
+                            </button>
+                            <button onclick="openResetConfirmation()"
+                                class="action-btn action-btn-new text-base flex items-center justify-center gap-3">
+                                <i class="fas fa-user-plus action-btn-icon"></i>
+                                <span class="leading-tight text-center">
+                                    <span class="action-line">เริ่มเคสใหม่</span>
+                                    <span class="action-line">(ล้างข้อมูลเดิม)</span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="min-w-0">
+                    <div id="tipsContainer" class="hidden bg-blue-50 border border-blue-200 rounded-lg p-3 mode-card-tips">
                         <p id="tipsTitle" class="text-base font-bold text-gray-900">วิธีใช้ (เคสเดิม)</p>
                         <ol id="tipsExisting" class="mt-2 list-decimal list-inside space-y-1 text-base text-gray-900">
                             <li><span class="font-bold">กด</span> ปุ่ม <span
-                                    class="font-bold text-blue-700">รายงานเคสเดิม</span></li>
+                                    class="font-bold text-blue-700">เคสเดิม: นำเข้าจาก LINE</span></li>
                             <li><span class="font-bold">ตรวจ</span> ข้อมูลพื้นฐาน/Allergy และเลือกวัน/เวลา</li>
                             <li><span class="font-bold">กรอก</span> SOAP แล้วตรวจยา ติ๊กยืนยัน กด <span
                                     class="font-bold">สร้างข้อความ</span></li>
                         </ol>
                         <ol id="tipsNew" class="hidden mt-2 list-decimal list-inside space-y-1 text-base text-gray-900">
                             <li><span class="font-bold">กด</span> ปุ่ม <span
-                                    class="font-bold text-green-700">รับเคสใหม่</span></li>
+                                    class="font-bold text-green-700">เริ่มเคสใหม่</span> แล้วกรอกข้อมูล</li>
                             <li><span class="font-bold">กรอก</span> ข้อมูลพื้นฐาน/Allergy + OPD card</li>
                             <li><span class="font-bold">เลือกวัน/เวลา</span> กรอก SOAP แล้วตรวจยา ติ๊กยืนยัน กด <span
                                     class="font-bold">สร้างข้อความ</span></li>
@@ -932,7 +1232,7 @@
     <div id="importModal"
         class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 overflow-y-auto h-full w-full z-50 flex items-center justify-center">
         <div class="relative bg-white w-full max-w-lg rounded-xl shadow-2xl p-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-file-import text-yellow-500 mr-2"></i>
+            <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-file-import text-green-600 mr-2"></i>
                 นำเข้าข้อมูลจาก LINE</h2>
             <p class="text-sm text-gray-600 mb-3">วางข้อความทั้งหมดที่ Copy มาจาก LINE เพื่ออัปเดตยาและประวัติล่าสุด</p>
             <textarea id="importText" rows="10"
@@ -941,9 +1241,8 @@
             <div class="flex justify-end space-x-3 mt-4">
                 <button onclick="closeImportModal()"
                     class="px-5 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 font-bold">ยกเลิก</button>
-                <button onclick="processImport()"
-                    class="px-5 py-3 bg-yellow-400 text-yellow-950 font-bold rounded-lg hover:bg-yellow-300">ตกลง
-                    นำเข้าข้อมูล</button>
+                <button id="importPrimaryBtn" onclick="handleImportPrimaryAction()"
+                    class="px-5 py-3 bg-line-green text-white font-bold rounded-lg hover:bg-line-dark">วางจากคลิปบอร์ด</button>
             </div>
         </div>
     </div>
@@ -1470,7 +1769,7 @@
 
         // --- Font Size Controls (Accessibility) ---
         const FONT_SIZE_STORAGE_KEY = 'patientLog_fontSizePx';
-        const FONT_SIZE_STEPS = [14, 15, 16, 17, 18, 19, 20, 21, 22];
+        const FONT_SIZE_STEPS = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
         const DEFAULT_FONT_SIZE_PX = 16;
 
         function updateFontSizeLabel(px) {
@@ -1628,8 +1927,74 @@
             }
         }
 
-        function openImportModal() { document.getElementById('importModal').classList.remove('hidden'); document.getElementById('importText').value = ''; }
+        const IMPORT_PRIMARY_LABEL_PASTE = 'วางจากคลิปบอร์ด';
+        const IMPORT_PRIMARY_LABEL_CONFIRM = 'ตกลงนำเข้าข้อมูล';
+        let importModalInitialized = false;
+
+        function openImportModal() {
+            const modal = document.getElementById('importModal');
+            const input = document.getElementById('importText');
+            if (modal) modal.classList.remove('hidden');
+            if (input) input.value = '';
+            updateImportPrimaryButton();
+
+            if (!importModalInitialized && input) {
+                input.addEventListener('input', updateImportPrimaryButton);
+                importModalInitialized = true;
+            }
+
+            if (input) {
+                setTimeout(() => {
+                    input.focus();
+                    if (typeof input.select === 'function') input.select();
+                }, 50);
+            }
+        }
+
+        function updateImportPrimaryButton() {
+            const input = document.getElementById('importText');
+            const btn = document.getElementById('importPrimaryBtn');
+            if (!input || !btn) return;
+            const hasText = Boolean(input.value.trim());
+            btn.textContent = hasText ? IMPORT_PRIMARY_LABEL_CONFIRM : IMPORT_PRIMARY_LABEL_PASTE;
+        }
+
+        async function tryPasteImportText({ announce = false } = {}) {
+            const input = document.getElementById('importText');
+            if (!input) return false;
+            if (!navigator.clipboard || typeof navigator.clipboard.readText !== 'function') {
+                if (announce) showToast('ไม่สามารถอ่านคลิปบอร์ดได้ในอุปกรณ์นี้', 'warning');
+                return false;
+            }
+            try {
+                const text = await navigator.clipboard.readText();
+                if (text && !input.value.trim()) {
+                    input.value = text;
+                    if (announce) showToast('วางข้อความจากคลิปบอร์ดให้อัตโนมัติแล้ว', 'info');
+                    return true;
+                }
+            } catch (_) {
+                if (announce) showToast('ไม่สามารถอ่านคลิปบอร์ดได้', 'warning');
+            }
+            return false;
+        }
+
+        async function handleImportPrimaryAction() {
+            const input = document.getElementById('importText');
+            if (!input) return;
+            if (!input.value.trim()) {
+                const didPaste = await tryPasteImportText({ announce: true });
+                if (didPaste) updateImportPrimaryButton();
+                return;
+            }
+            processImport();
+        }
         function closeImportModal() { document.getElementById('importModal').classList.add('hidden'); }
+
+        function openImportExistingCase() {
+            startExistingCase({ skipImportPrompt: true });
+            openImportModal();
+        }
 
         function processImport() {
             const text = document.getElementById('importText').value;
@@ -2537,7 +2902,7 @@
 
             hasManualTime = false;
             initDate({ force: true });
-            setTipsMode('new');
+            setTipsMode('existing');
         }
 
         // --- CORE NEW CASE LOGIC (No Alert/Confirm - Uses Modal) ---
@@ -2641,7 +3006,79 @@
             openClearFormConfirmation();
         }
 
-        function startExistingCase() {
+        function isPlaceholderHeader(text) {
+            const normalized = (text || '').trim();
+            if (!normalized) return true;
+
+            const baseHeaders = [defaultHeader, blankTemplate].map((value) => (value || '').trim());
+            if (baseHeaders.includes(normalized)) return true;
+
+            const lines = normalized.split('\n').map((line) => line.trim()).filter(Boolean);
+            let hasRealData = false;
+
+            lines.forEach((line) => {
+                if (hasRealData) return;
+                if (/^=+/.test(line)) return;
+
+                if (/^ผู้ป่วย:/i.test(line)) {
+                    const val = line.replace(/^ผู้ป่วย:\s*/i, '').replace(/\(.*?\)/g, '').trim();
+                    if (val && val !== '...' && val !== 'ชื่อ-นามสกุล') hasRealData = true;
+                    return;
+                }
+
+                if (/^Dx:/i.test(line)) {
+                    const val = line.replace(/^Dx:\s*/i, '').trim();
+                    if (val && val !== '...') hasRealData = true;
+                    return;
+                }
+
+                if (/^Admit:/i.test(line)) {
+                    const val = line.replace(/^Admit:\s*/i, '').trim();
+                    if (val && val !== '...') hasRealData = true;
+                    return;
+                }
+
+                if (/^(CC|HPI|PH|FHx|Allergy):/i.test(line)) {
+                    const val = line.replace(/^(CC|HPI|PH|FHx|Allergy):\s*/i, '').trim();
+                    if (val && val !== '...') hasRealData = true;
+                    return;
+                }
+
+                if (/^💊/.test(line)) {
+                    const dateMatch = line.match(/\(([^)]+)\)/);
+                    if (dateMatch && /\d/.test(dateMatch[1])) hasRealData = true;
+                    return;
+                }
+
+                if (/^[•\-]/.test(line)) {
+                    if (!line.includes('ยังไม่มีรายการยา') && !line.includes('...')) hasRealData = true;
+                    return;
+                }
+
+                hasRealData = true;
+            });
+
+            return !hasRealData;
+        }
+
+        function hasExistingCaseData() {
+            const history = document.getElementById('historyPart')?.value?.trim() || '';
+            if (history) return true;
+
+            const formIds = [
+                'pFName', 'pAge', 'pDx', 'pAdmitDate', 'pAllergy', 'pMedsCont',
+                'inputCC', 'inputHPI', 'inputPMH', 'inputFHx',
+            ];
+            const hasFormData = formIds.some((id) => (document.getElementById(id)?.value || '').trim());
+            if (hasFormData) return true;
+
+            const headerText = document.getElementById('headerPart')?.value || '';
+            return !isPlaceholderHeader(headerText);
+        }
+
+        function startExistingCase(options = {}) {
+            const { skipImportPrompt = false } = options;
+            const shouldPromptImport = !skipImportPrompt && !hasExistingCaseData();
             switchHeaderView('form');
             toggleAdmitMode(false);
             const el = document.getElementById('dailyEntrySection');
@@ -2649,6 +3086,9 @@
             setTipsMode('existing');
             showToast('พร้อมทำรายงานเคสเดิมแล้ว', 'info');
             saveFormState();
+            if (shouldPromptImport) {
+                openImportModal();
+            }
         }
 
         function generateLog() {
@@ -3034,6 +3474,17 @@
         let tipsModeState = 'existing';
         let tipsDetailState = false;
 
+        function updateCaseModeToggle() {
+            const isNew = tipsModeState === 'new';
+            const badge = document.getElementById('caseModeBadge');
+
+            if (badge) {
+                badge.textContent = isNew ? 'รับเคสใหม่' : 'เคสเดิม';
+                badge.classList.toggle('mode-badge-new', isNew);
+                badge.classList.toggle('mode-badge-existing', !isNew);
+            }
+        }
+
         function updateTipsTitle() {
             const title = document.getElementById('tipsTitle');
             if (!title) return;
@@ -3044,13 +3495,19 @@
         function setTipsDetail(isDetailed, { persist = true } = {}) {
             tipsDetailState = Boolean(isDetailed);
             const btn = document.getElementById('tipsToggleBtn');
+            const container = document.getElementById('tipsContainer');
             if (btn) {
                 btn.setAttribute('aria-pressed', tipsDetailState ? 'true' : 'false');
+                btn.setAttribute('aria-expanded', tipsDetailState ? 'true' : 'false');
+                btn.setAttribute('aria-label', tipsDetailState ? 'ซ่อนวิธีใช้' : 'แสดงวิธีใช้');
                 btn.classList.toggle('bg-white', !tipsDetailState);
                 btn.classList.toggle('border-gray-200', !tipsDetailState);
-                btn.classList.toggle('bg-blue-100', tipsDetailState);
-                btn.classList.toggle('border-blue-200', tipsDetailState);
+                btn.classList.toggle('text-blue-700', !tipsDetailState);
+                btn.classList.toggle('bg-amber-100', tipsDetailState);
+                btn.classList.toggle('border-amber-200', tipsDetailState);
+                btn.classList.toggle('text-amber-700', tipsDetailState);
             }
+            if (container) container.classList.toggle('hidden', !tipsDetailState);
 
             if (persist) {
                 localStorage.setItem(TIPS_DETAIL_STORAGE_KEY, tipsDetailState ? '1' : '0');
@@ -3068,6 +3525,7 @@
             tipsModeState = isNew ? 'new' : 'existing';
             updateTipsTitle();
             updateTipsVisibility();
+            updateCaseModeToggle();
         }
 
         function updateTipsVisibility() {
@@ -3077,6 +3535,16 @@
 
             if (existingList) existingList.classList.toggle('hidden', isNew);
             if (newList) newList.classList.toggle('hidden', !isNew);
+        }
+
+        function handleCaseModeExisting() {
+            if (tipsModeState === 'existing') return;
+            startExistingCase();
+        }
+
+        function handleCaseModeNew() {
+            if (tipsModeState === 'new') return;
+            startNewCase();
         }
 
         function initTipsMode() {
